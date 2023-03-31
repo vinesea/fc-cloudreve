@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set +e
+
+mkdir /cloudreve
+
+ln -sf /mnt/auto/database /cloudreve/database
+
+ln -sf /mnt/auto/uploads /cloudreve/uploads
+ln -sf /mnt/auto/avatar /cloudreve/avatar
+ln -sf /mnt/auto/oss /cloudreve/oss
+
+# 启动 Cloudreve
+./cloudreve -c ./conf.ini
